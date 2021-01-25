@@ -14,7 +14,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-      JSONObject coffeeMachineData = null;
+      JSONObject coffeeMachineData;
 
       try {
         coffeeMachineData = CoffeeMachineInfoParser.getCoffeeMachineData(JSON_FILE);
@@ -22,7 +22,6 @@ public class Main {
         e.printStackTrace();
         return;
       }
-
 
       int numberOfOutlets = CoffeeMachineInfoParser.getNumberOfOutletsInCoffeeMachine(coffeeMachineData);
 

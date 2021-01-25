@@ -11,6 +11,7 @@ import java.util.concurrent.Executors;
  * This class is provided to the clients to access the coffee machine.
  * It has services as add ingredients and get a beverage.
  * To instantiate we need the number of outlets.
+ * Each outlet works as a separate thread working on serving a beverage.
  * @author sibhasin
  */
 public class CoffeeMachineService {
