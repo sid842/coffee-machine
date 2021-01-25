@@ -68,13 +68,13 @@ public class IngredientsService {
 
     for(Ingredient requiredIngredient: requiredIngredients) {
       if(ingredientMap.containsKey(requiredIngredient.getName())) {
-        Ingredient ingredientPresent = ingredientMap.get(requiredIngredient.getName());
-        ingredientPresent.lock();
-        if(ingredientPresent.getQuantity() < requiredIngredient.getQuantity()) {
+        Ingredient presentIngredient = ingredientMap.get(requiredIngredient.getName());
+        presentIngredient.lock();
+        if(presentIngredient.getQuantity() < requiredIngredient.getQuantity()) {
           status = IngredientsStatus.INSUFFICIENT;
-          ingredientPresent.unlock();
+          presentIngredient.unlock();
         } else {
-          ingredientsModified.add(ingredientPresent);
+          ingredientsModified.add(presentIngredient);
         }
       } else {
         status = IngredientsStatus.UNAVAILABLE;
