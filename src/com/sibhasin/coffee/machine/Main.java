@@ -10,7 +10,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-      CoffeeMachineService service = new CoffeeMachineService(1);
+      CoffeeMachineService service = new CoffeeMachineService(2);
       List<Ingredient> ingredientsPresent = new ArrayList<>();
       ingredientsPresent.add(new Ingredient("A", 10));
       ingredientsPresent.add(new Ingredient("B", 10));
@@ -26,7 +26,7 @@ public class Main {
 
       List<Ingredient> ingredientsRequired2 = new ArrayList<>();
       ingredientsRequired2.add(new Ingredient("C", 5));
-      ingredientsRequired2.add(new Ingredient("B", 4));
+      ingredientsRequired2.add(new Ingredient("B", 66));
 
 
       Beverage beverage2 = new Beverage("b2", ingredientsRequired2);

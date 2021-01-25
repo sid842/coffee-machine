@@ -9,9 +9,12 @@ import java.util.concurrent.Executors;
 
 /**
  * This class is provided to the clients to access the coffee machine.
+ * It has services as add ingredients and get a beverage.
+ * To instantiate we need the number of outlets.
  * @author sibhasin
  */
 public class CoffeeMachineService {
+
   private ExecutorService outlets;
   private IngredientsService service;
 

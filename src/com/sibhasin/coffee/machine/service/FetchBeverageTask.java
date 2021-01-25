@@ -18,10 +18,6 @@ public class FetchBeverageTask implements Runnable {
 
   @Override
   public void run() {
-    boolean isBeverageServed = service.getBeverageWithIngredients(beverage);
-    if(isBeverageServed)
-      System.out.println(beverage.getName() + " is served.");
-    else
-      System.out.println(beverage.getName() + " cannot be served");
+    System.out.println(service.prepareBeverageWithIngredients(beverage));
   }
 }

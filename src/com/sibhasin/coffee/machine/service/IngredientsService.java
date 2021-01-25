@@ -4,6 +4,7 @@ import com.sibhasin.coffee.machine.model.Beverage;
 import com.sibhasin.coffee.machine.model.Ingredient;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,6 +14,22 @@ import java.util.Map;
  * @author sibhasin
  */
 public class IngredientsService {
+
+  enum IngredientsStatus {
+    UNAVAILABLE("not available"),
+    INSUFFICIENT("not sufficient"),
+    AVAILABLE("available");
+
+    IngredientsStatus(String status) {
+      this.status = status;
+    }
+
+    public String getStatus() {
+      return status;
+    }
+
+    private String status;
+  }
 
   private Map<String, Ingredient> ingredientMap;
 
@@ -24,33 +41,61 @@ public class IngredientsService {
     ingredientMap.put(ingredient.getName(), ingredient);
   }
 
-  public boolean getBeverageWithIngredients(Beverage beverage) {
-    List<Ingredient> ingredients = getRequiredIngredientsPresent(beverage);
-    return !ingredients.isEmpty();
-  }
+  public String prepareBeverageWithIngredients(Beverage beverage) {
+    StringBuilder missingIngredient = new StringBuilder();
+    IngredientsStatus status = checkIfRequiredIngredientsPresent(beverage, missingIngredient);
 
-  private List<Ingredient> getRequiredIngredientsPresent(Beverage beverage) {
-    List<Ingredient> ingredients = new ArrayList<>();
-
-    boolean sufficientSupplies = true;
-    for(Ingredient requiredIngredient: beverage.getRequiredIngredients()) {
-      if(ingredientMap.containsKey(requiredIngredient.getName())) {
-        Ingredient ingredientPresent = ingredientMap.get(requiredIngredient.getName());
-        if(ingredientPresent.getQuantity() < requiredIngredient.getQuantity()) {
-          sufficientSupplies = false;
-        } else {
-          ingredientPresent.setQuantity(ingredientPresent.getQuantity()-requiredIngredient.getQuantity());
-          ingredients.add(ingredientPresent);
-        }
-      } else {
-        sufficientSupplies = false;
-      }
-      if(!sufficientSupplies){
-        ingredients.clear();
-        break;
-      }
+    if(status == IngredientsStatus.AVAILABLE) {
+     return beverage.getName() + " is prepared.";
     }
 
-    return ingredients;
+    return beverage.getName() + " cannot be prepared because item " +
+                missingIngredient.toString() + " is " +  status.getStatus();
+  }
+
+  private IngredientsStatus checkIfRequiredIngredientsPresent(Beverage beverage, StringBuilder missingIngredient) {
+
+    /**
+     * This sort is necessary so as to avoid deadlock.
+     * We acquire locks in increasing order of ingredients.
+     */
+    Collections.sort(beverage.getRequiredIngredients());
+
+    List<Ingredient> ingredientsModified = new ArrayList<>();
+    List<Ingredient> requiredIngredients = beverage.getRequiredIngredients();
+
+    IngredientsStatus status = IngredientsStatus.AVAILABLE;
+
+    for(Ingredient requiredIngredient: requiredIngredients) {
+      if(ingredientMap.containsKey(requiredIngredient.getName())) {
+        Ingredient ingredientPresent = ingredientMap.get(requiredIngredient.getName());
+        ingredientPresent.lock();
+        if(ingredientPresent.getQuantity() < requiredIngredient.getQuantity()) {
+          status = IngredientsStatus.INSUFFICIENT;
+          ingredientPresent.unlock();
+        } else {
+          ingredientsModified.add(ingredientPresent);
+        }
+      } else {
+        status = IngredientsStatus.UNAVAILABLE;
+      }
+
+      if(status != IngredientsStatus.AVAILABLE) {
+        missingIngredient.append(requiredIngredient.getName());
+        for(Ingredient ingredient: ingredientsModified)
+          ingredient.unlock();
+
+        return status;
+      }
+
+    }
+
+    for(int i = 0; i < ingredientsModified.size(); ++i) {
+      Ingredient currentIngredient = ingredientsModified.get(i);
+      currentIngredient.setQuantity(currentIngredient.getQuantity()-requiredIngredients.get(i).getQuantity());
+      currentIngredient.unlock();
+    }
+
+    return IngredientsStatus.AVAILABLE;
   }
 }

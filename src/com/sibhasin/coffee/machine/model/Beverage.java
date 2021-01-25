@@ -20,15 +20,8 @@ public class Beverage {
     return name;
   }
 
-  public void setName(String name) {
-    this.name = name;
-  }
-
   public List<Ingredient> getRequiredIngredients() {
     return requiredIngredients;
   }
 
-  public void setRequiredIngredients(List<Ingredient> requiredIngredients) {
-    this.requiredIngredients = requiredIngredients;
-  }
 }
