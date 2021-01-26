@@ -17,4 +17,10 @@ for deciding whether we have sufficient ingredients or not.
 3. **FetchBeverageTask** <br />
 This class encapsulates the task of actually serving a beverage request. 
 
-
+## Steps to Execute JAR
+1. Make sure you have java installed on the system.
+2. Download the JAR _output/coffee-machine.jar_
+3. Then execute the following command <br />
+```
+    $ java -jar coffee-machine.jar
+```
