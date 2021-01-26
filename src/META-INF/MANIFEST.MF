@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Class-Path: /Users/sibhasin/Git/coffee-machine/target/classes/com/sibh
+ asin/coffee/machine/model/*.class /Users/sibhasin/Git/coffee-machine/
+ target/classes/com/sibhasin/coffee/machine/*.class /Users/sibhasin/Gi
+ t/coffee-machine/target/classes/com/sibhasin/coffee/machine/util/*.cl
+ ass /Users/sibhasin/Git/coffee-machine/target/classes/com/sibhasin/co
+ ffee/machine/service/*.class
+Main-Class: com.sibhasin.coffee.machine.Main
+

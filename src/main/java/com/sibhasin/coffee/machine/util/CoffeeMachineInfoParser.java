@@ -8,6 +8,8 @@ import org.json.simple.parser.JSONParser;
 
 
 import java.io.FileReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -28,9 +30,9 @@ public class CoffeeMachineInfoParser {
   public static JSONObject getCoffeeMachineData(String filePath) throws Exception {
     JSONParser jsonParser = new JSONParser();
 
-    FileReader reader = new FileReader(filePath);
+    InputStream is = CoffeeMachineInfoParser.class.getResourceAsStream(filePath);
     //Read json files
-    JSONObject json  = (JSONObject)jsonParser.parse(reader);;
+    JSONObject json = json = (JSONObject)jsonParser.parse(new InputStreamReader(is));
 
     return (JSONObject) json.get(MACHINE);
   }

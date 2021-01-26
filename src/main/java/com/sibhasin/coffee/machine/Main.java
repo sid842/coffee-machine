@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Main {
 
-    private static final String JSON_FILE = "./src/main/resources/coffee-machine-test-2.json";
+    private static final String JSON_FILE = "/coffee-machine-test-2.json";
 
     public static void main(String[] args) {
 
