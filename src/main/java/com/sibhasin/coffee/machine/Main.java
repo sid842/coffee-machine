@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Main {
 
-    private static final String JSON_FILE = "./src/main/resources/coffee-machine-test-1.json";
+    private static final String JSON_FILE = "./src/main/resources/coffee-machine-test-2.json";
 
     public static void main(String[] args) {
 
@@ -41,6 +41,8 @@ public class Main {
         service.getBeverage(beverage);
       }
 
+      service.switchOff();
+
       List<Ingredient> ingredientsWithLowQuantity = service.getIngredientsWithLowQuantity();
 
       StringBuilder sb = new StringBuilder();
@@ -50,8 +52,6 @@ public class Main {
 
       if(sb.length() > 0)
         System.out.println("Ingredients on low quantity: " + sb.substring(0, sb.lastIndexOf(",")));
-
-      service.switchOff();
 
     }
 }
