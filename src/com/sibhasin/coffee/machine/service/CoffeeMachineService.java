@@ -34,6 +34,10 @@ public class CoffeeMachineService {
     }
   }
 
+  public List<Ingredient> getIngredientsWithLowQuantity() {
+    return service.getIngredientsWithLowQuantity();
+  }
+
   public void switchOff() {
     outlets.shutdown();
   }

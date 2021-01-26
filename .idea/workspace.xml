@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cb67157-b559-47a9-9e87-8a7d265c8514" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/model/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/model/Ingredient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/service/CoffeeMachineService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/service/CoffeeMachineService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/service/IngredientsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/service/IngredientsService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,23 +19,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sibhasin/coffee/machine/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="35" selection-start-column="8" selection-end-column="35" />
+            <state relative-caret-position="406">
+              <caret line="51" column="97" selection-start-line="51" selection-start-column="97" selection-end-line="51" selection-end-column="97" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Manifest.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="40" selection-start-column="40" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -52,10 +46,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sibhasin/coffee/machine/service/CoffeeMachineService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="10" column="70" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="70" />
+            <state relative-caret-position="355">
+              <caret line="36" column="55" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1145#1146#0" expanded="true" />
+                <element signature="e#1159#1160#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sibhasin/coffee/machine/service/IngredientsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1387">
-              <caret line="88" column="7" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="7" />
+            <state relative-caret-position="469">
+              <caret line="112" column="34" selection-start-line="112" selection-start-column="34" selection-end-line="112" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#786#787#0" expanded="true" />
@@ -129,6 +125,22 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sibhasin/coffee/machine/model/Ingredient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#985#986#0" expanded="true" />
+                <element signature="e#1007#1008#0" expanded="true" />
+                <element signature="e#1044#1045#0" expanded="true" />
+                <element signature="e#1065#1066#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -154,16 +166,16 @@
         <option value="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/model/CoffeeMachine.java" />
         <option value="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/service/FetchBeverageTask.java" />
         <option value="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/model/Beverage.java" />
-        <option value="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/model/Ingredient.java" />
         <option value="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/util/CoffeeInfoJsonParser.java" />
-        <option value="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/service/CoffeeMachineService.java" />
         <option value="$PROJECT_DIR$/resources/coffee-machine-test-1.json" />
         <option value="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/util/CoffeeMachineInfoJsonParser.java" />
-        <option value="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/service/IngredientsService.java" />
         <option value="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/util/CoffeeMachineInfoParser.java" />
-        <option value="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/Main.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Manifest.txt" />
+        <option value="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/model/Ingredient.java" />
+        <option value="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/service/IngredientsService.java" />
+        <option value="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/service/CoffeeMachineService.java" />
+        <option value="$PROJECT_DIR$/src/com/sibhasin/coffee/machine/Main.java" />
       </list>
     </option>
   </component>
@@ -208,6 +220,27 @@
               <item name="coffee-machine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="machine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coffee-machine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coffee-machine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="machine" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coffee-machine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coffee-machine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="machine" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coffee-machine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coffee-machine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="machine" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="coffee-machine" type="b2602c69:ProjectViewProjectNode" />
@@ -325,28 +358,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sibhasin/coffee/machine/model/Ingredient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#570#571#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#799#800#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -361,20 +372,6 @@
           <folding>
             <element signature="e#509#510#0" expanded="true" />
             <element signature="e#587#588#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sibhasin/coffee/machine/service/IngredientsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1387">
-          <caret line="88" column="7" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
-            <element signature="e#943#944#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -403,23 +400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sibhasin/coffee/machine/model/Beverage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sibhasin/coffee/machine/service/CoffeeMachineService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="10" column="70" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -431,20 +411,67 @@
       </provider>
       <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sibhasin/coffee/machine/Main.java">
+    <entry file="file://$PROJECT_DIR$/Manifest.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="35" selection-start-column="8" selection-end-column="35" />
+          <caret column="44" lean-forward="true" selection-start-column="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sibhasin/coffee/machine/model/Beverage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sibhasin/coffee/machine/model/Ingredient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#985#986#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
+            <element signature="e#1044#1045#0" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manifest.txt">
+    <entry file="file://$PROJECT_DIR$/src/com/sibhasin/coffee/machine/service/IngredientsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="40" selection-start-column="40" selection-end-column="40" />
+        <state relative-caret-position="469">
+          <caret line="112" column="34" selection-start-line="112" selection-start-column="34" selection-end-line="112" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sibhasin/coffee/machine/service/CoffeeMachineService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="36" column="55" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1145#1146#0" expanded="true" />
+            <element signature="e#1159#1160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sibhasin/coffee/machine/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="51" column="97" selection-start-line="51" selection-start-column="97" selection-end-line="51" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

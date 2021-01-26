@@ -6,8 +6,10 @@ import com.sibhasin.coffee.machine.model.Ingredient;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * This class is managing all the ingredients present in the machine.
@@ -97,5 +99,17 @@ public class IngredientsService {
     }
 
     return IngredientsStatus.AVAILABLE;
+  }
+
+  public List<Ingredient> getIngredientsWithLowQuantity() {
+    List<Ingredient> lowQuantityIngredients = new ArrayList<>();
+    Set<Map.Entry<String, Ingredient>> ingredientsMapEntries = ingredientMap.entrySet();
+    for(Map.Entry<String, Ingredient> ingredientEntry: ingredientsMapEntries) {
+      Ingredient ingredient = ingredientEntry.getValue();
+      if(ingredient.isLow())
+        lowQuantityIngredients.add(ingredient);
+    }
+
+    return lowQuantityIngredients;
   }
 }

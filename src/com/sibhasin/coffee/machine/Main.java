@@ -41,6 +41,16 @@ public class Main {
         service.getBeverage(beverage);
       }
 
+      List<Ingredient> ingredientsWithLowQuantity = service.getIngredientsWithLowQuantity();
+
+      StringBuilder sb = new StringBuilder();
+      for(Ingredient ingredient: ingredientsWithLowQuantity) {
+        sb.append(ingredient.getName()).append(',');
+      }
+
+      if(sb.length() > 0)
+        System.out.println("Ingredients on low quantity: " + sb.substring(0, sb.lastIndexOf(",")));
+
       service.switchOff();
 
     }

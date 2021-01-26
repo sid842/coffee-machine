@@ -11,13 +11,18 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author sibhasin
  */
 public class Ingredient implements Comparable<Ingredient> {
+
+  private static final int THRESHOLD_QUANTITY = 10;
+
   private String name;
   private int quantity;
+  private boolean isLow;
   private Lock lock;
 
   public Ingredient(String name, int quantity) {
     this.name = name;
     this.quantity = quantity;
+    this.setLow();
     this.lock = new ReentrantLock();
   }
 
@@ -31,6 +36,15 @@ public class Ingredient implements Comparable<Ingredient> {
 
   public void setQuantity(int quantity) {
     this.quantity = quantity;
+    this.setLow();
+  }
+
+  public boolean isLow() {
+    return isLow;
+  }
+
+  public void setLow() {
+    isLow = this.getQuantity() < THRESHOLD_QUANTITY;
   }
 
   public void lock() {
